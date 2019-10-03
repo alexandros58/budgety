@@ -324,6 +324,19 @@ var controller = (function(budgetCtrl, UICtrl) {
         document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
         
         document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
+        
+        document.querySelector('.ham').addEventListener('click', () => {
+              document.getElementById("alex").style.width = "25%";
+              document.querySelector(".ham").style.display = "none";
+              document.getElementById("main").style.marginLeft = "25%";
+
+        })
+        document.querySelector('.click-icon').addEventListener('click', () => {
+              document.getElementById("alex").style.width = "0%";
+              document.getElementById("main").style.marginLeft = "0";
+              document.querySelector(".ham").style.display = "block";
+
+        })
     };
     
     var updateBudget = function() {
@@ -421,6 +434,8 @@ var controller = (function(budgetCtrl, UICtrl) {
 
 
 controller.init();
+
+
 
 
 
